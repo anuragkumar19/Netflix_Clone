@@ -1,0 +1,381 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+
+#showcase {
+    background: url('../img/[www.netflix.com][17]CA-en-20201019-popsignuptwoweeks-perspective_alpha_website_medium.jpg')
+        no-repeat center center/cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: 2rem;
+    color: #fff;
+    min-height: 500px;
+}
+
+#showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000083;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: inset 0px 100px 250px #00000095;
+}
+
+#showcase nav {
+    height: 45px;
+}
+
+.showcase-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 80% !important;
+}
+
+#showcase-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100% - (36px + 45px));
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.inp-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.inp-group input {
+    flex: 3;
+    height: 100%;
+    padding: 0.3rem 1rem;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+
+.inp-group .btn {
+    flex: 1;
+    height: 100% !important;
+    font-size: 1.3rem;
+}
+
+#faqs .heading {
+    text-align: center;
+}
+
+.list {
+    max-width: 900px !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.list .question {
+    background: #303030;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.23rem;
+    cursor: pointer;
+    font-size: 1.625rem;
+    font-weight: 400;
+}
+
+.list .question .right {
+    transform: scale(2);
+}
+
+footer {
+    color: #757575 !important;
+}
+
+footer a {
+    color: #757575;
+    display: block;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 1rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.btn-dropdown {
+    padding: 0.9rem;
+    font-size: 16px;
+    font-weight: 300;
+    background: #00000000;
+    outline: none;
+    border: 1px solid #757575;
+    color: #757575;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+/* Utilities */
+.container {
+    max-width: 1180px;
+    width: 90%;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.btn {
+    padding: 0.4rem 1rem;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    outline: none;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-lg {
+    padding: 0.6rem 1.5rem;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.split {
+    border-bottom: 8px solid #222;
+}
+
+.heading {
+    font-size: 3.125rem;
+    padding: 0 100px;
+}
+
+.sub-heading {
+    font-size: 1.625rem;
+    margin-top: 1rem;
+}
+
+.form-group p {
+    text-align: center;
+}
+
+.form-group p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.btn i {
+    margin-left: 5px;
+}
+
+.py-3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.card {
+    background: #000;
+    color: #fff;
+}
+
+.ctrl {
+    max-width: 900px;
+}
+
+.px-2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+}
+
+.card .heading {
+    padding: 0;
+    margin: 0;
+}
+
+.card .sub-heading {
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    font-weight: normal;
+}
+
+.card img {
+    width: 100%;
+}
+
+.grid.reversed {
+    grid-template-columns: 4fr 5fr !important;
+}
+
+/* Media Queries */
+
+/* Tablet 910px */
+@media (max-width: 910px) {
+    .inp-group {
+        display: flex;
+        flex-direction: column;
+        height: 130px;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    .inp-group input {
+        flex: initial;
+        height: 50%;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .inp-group .btn {
+        flex: initial;
+        height: 50% !important;
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .heading {
+        font-size: 2.8rem;
+        padding: 0 40px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        text-align: center;
+    }
+
+    .sub-heading {
+        font-size: 1.25rem;
+    }
+
+    .grid.reversed {
+        grid-template-columns: 1fr !important;
+    }
+
+    .list .question {
+        font-size: 22px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile 750 px */
+@media (max-width: 750px) {
+    .heading {
+        font-size: 1.75rem;
+    }
+
+    .sub-heading {
+        font-size: 1.125rem;
+    }
+
+    .btn {
+        padding: 0.2rem 0.8rem;
+    }
+
+    .list .question {
+        font-size: 18px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .form-group p {
+        padding: 0;
+    }
+
+    #showcase .form-group p {
+        margin: 1rem auto;
+    }
+
+    #showcase nav {
+        height: 30px;
+    }
+
+    .inp-group {
+        height: 100px;
+    }
+
+    .inp-group input {
+        font-size: 17px;
+    }
+
+    .inp-group .btn {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
